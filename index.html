@@ -86,12 +86,17 @@
         }
 
         .field-line {
-            font-size: 19px;
+            font-size: 18px;
             line-height: 1.6;
             display: flex;
-            align-items: center;
-            gap: 5px;
+            align-items: baseline;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .field-label {
             white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .text-input {
@@ -99,10 +104,11 @@
             border-bottom: 1.5px dotted #000;
             outline: none;
             flex-grow: 1;
-            font-size: 19px;
+            font-size: 18px;
             font-family: 'Amiri', serif;
             padding: 0 5px;
             background: transparent;
+            min-width: 50px;
         }
 
         .table-container {
@@ -241,27 +247,27 @@
 
         <div class="fields-container">
             <div class="field-line">
-                <span>أنا الممضي أسفله السيد(ة):</span>
+                <span class="field-label">أنا الممضي أسفله السيد(ة):</span>
                 <input type="text" class="text-input" placeholder="اكتب الاسم واللقب هنا...">
             </div>
 
             <div class="field-line">
-                <span>الوظيفة:</span>
+                <span class="field-label">الوظيفة:</span>
                 <input type="text" class="text-input" placeholder="اكتب الوظيفة هنا...">
             </div>
 
             <div class="field-line" style="margin-top: 4px;">
-                <span>أشهد أنني قد استلمت من السيد(ة):</span>
+                <span class="field-label">أشهد أنني قد استلمت من السيد(ة):</span>
                 <input type="text" class="text-input" placeholder="اكتب اسم المسلم هنا...">
             </div>
 
             <div class="field-line">
-                <span>الوظيفة:</span>
+                <span class="field-label">الوظيفة:</span>
                 <input type="text" class="text-input" placeholder="اكتب وظيفة المسلم هنا...">
             </div>
 
             <div class="field-line" style="font-weight: bold; margin-top: 6px;">
-                <span>العتاد المذكور في الجدول التالي :</span>
+                <span class="field-label">العتاد المذكور في الجدول التالي :</span>
             </div>
         </div>
 
