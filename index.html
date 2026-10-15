@@ -1,3 +1,35 @@
+تم إجراء كافة التعديلات المطلوبة بدقة لتطابق النموذج الأصلي تماماً:
+
+1. **محاذاة الترويسة:** أصبحت عبارة الترويسة *(وزارة التعليم العالي... الإقامة الجامعية حيور عمار ميلة)* موسطة وفي المنتصف تحت عنوان "الجمهورية الجزائرية..." تماماً.
+
+
+2. **ترتيب أعمدة الجدول من اليمين إلى اليسار:**
+* **الرقم** (على أقصى اليمين مع خلفية رمادية للعمود).
+
+
+* **تعيين العتاد**.
+
+
+* **الكمية**.
+
+
+* **الملاحظة** (على أقصى اليسار).
+
+
+
+
+3. **تقليص عدد الأسطر:** تم ضبط الجدول ليتكون من **10 خانات فقط** (من 1 إلى 10).
+
+
+4. **تنسيق السطور:** تم ترتيب أسطر التصريح والنقاط بشكل مستقيم ومريح.
+
+
+
+---
+
+### 📋 الكود المعدل المباشر لملف `index.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -51,54 +83,48 @@
             background: white;
             width: 210mm;
             min-height: 297mm;
-            padding: 12mm 15mm;
+            padding: 15mm 20mm;
             box-shadow: 0 0 10px rgba(0,0,0,0.15);
-            border: 1px solid #ccc;
-        }
-
-        .header {
-            text-align: left;
-            font-size: 15px;
-            font-weight: bold;
-            line-height: 1.5;
-            margin-bottom: 10px;
         }
 
         .top-title {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+        }
+
+        .header-center {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
         .doc-title {
             text-align: center;
-            font-size: 32px;
+            font-size: 34px;
             font-weight: bold;
-            margin: 15px 0 25px 0;
+            margin: 20px 0 30px 0;
         }
 
         .field-line {
             font-size: 20px;
             line-height: 2.2;
-            margin-bottom: 10px;
-        }
-
-        .dots {
-            border-bottom: 2px dotted #000;
-            display: inline-block;
-            min-width: 150px;
+            margin-bottom: 8px;
         }
 
         .table-container {
-            margin-top: 20px;
+            margin-top: 25px;
             width: 100%;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 18px;
+            font-size: 19px;
+            direction: rtl;
         }
 
         th, td {
@@ -117,7 +143,7 @@
 
         .col-num {
             width: 10%;
-            background-color: #f2f2f2;
+            background-color: #e0e0e0 !important;
             font-weight: bold;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
@@ -136,14 +162,14 @@
         }
 
         td {
-            height: 38px;
+            height: 42px;
         }
 
         .footer-signatures {
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
-            padding: 0 40px;
+            margin-top: 45px;
+            padding: 0 30px;
             font-size: 22px;
             font-weight: bold;
         }
@@ -169,23 +195,16 @@
 
             .paper {
                 box-shadow: none !important;
-                border: none !important;
                 width: 100% !important;
                 height: 100% !important;
-                padding: 10mm 15mm !important;
+                padding: 12mm 18mm !important;
                 margin: 0 !important;
                 page-break-inside: avoid !important;
                 break-inside: avoid !important;
             }
 
-            th {
+            th, .col-num {
                 background-color: #e0e0e0 !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .col-num {
-                background-color: #f2f2f2 !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
@@ -204,7 +223,7 @@
             الجمهورية الجزائرية الديمقراطية الشعبية
         </div>
 
-        <div class="header">
+        <div class="header-center">
             وزارة التعليم العالي والبحث العلمي<br>
             الديوان الوطني للخدمات الجامعية<br>
             مديرية الخدمات الجامعية – ميلة -<br>
@@ -223,7 +242,7 @@
             أشهد أنني قد استلمت من السيد(ة):.........................................الوظيفة:...................................................
         </div>
 
-        <div class="field-line" style="font-weight: bold;">
+        <div class="field-line" style="font-weight: bold; margin-top: 10px;">
             العتاد المذكور في الجدول التالي :
         </div>
 
@@ -231,35 +250,34 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="col-obs">الملاحظة</th>
-                        <th class="col-qty">الكمية</th>
-                        <th class="col-item">تعيين العتاد</th>
                         <th class="col-num">الرقم</th>
+                        <th class="col-item">تعيين العتاد</th>
+                        <th class="col-qty">الكمية</th>
+                        <th class="col-obs">الملاحظة</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td></td><td></td><td></td><td class="col-num">.1</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.2</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.3</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.4</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.5</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.6</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.7</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.8</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">.9</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">10</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">11</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">12</td></tr>
-                    <tr><td></td><td></td><td></td><td class="col-num">13</td></tr>
+                    <tr><td class="col-num">.1</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.2</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.3</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.4</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.5</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.6</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.7</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.8</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">.9</td><td></td><td></td><td></td></tr>
+                    <tr><td class="col-num">10</td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
 
         <div class="footer-signatures">
-            <div>الجهة المستلمة</div>
             <div>الجهة المسلمة</div>
+            <div>الجهة المستلمة</div>
         </div>
     </div>
 
 </body>
 </html>
+
+```
